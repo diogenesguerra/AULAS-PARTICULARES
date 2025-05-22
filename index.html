@@ -1,0 +1,118 @@
+<<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diógenes Luiz de Sá Guerra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #1e40af;
+    }
+    .contato {
+      margin-top: 30px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #1e40af;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2563eb;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Diógenes Luiz de Sá Guerra</h1>
+    <p>Professor Particular de Matemática e Administração</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Formação Acadêmica</h2>
+      <ul>
+        <li>Técnico em Eletrônica pelo CEFET-PR</li>
+        <li>Bacharelado em Administração pela FESP-PR</li>
+        <li>Licenciatura em Matemática pela UTFPR</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contato</h2>
+      <p>E-mail: <a href="mailto:diogenesluizguerra@gmail.com">diogenesluizguerra@gmail.com</a></p>
+    </section>
+
+    <section class="contato">
+      <h2>Deixe seu contato</h2>
+      <form id="formContato">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <p id="resposta" style="color: green;"></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Diógenes Luiz de Sá Guerra. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const form = document.getElementById('formContato');
+    const resposta = document.getElementById('resposta');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      resposta.textContent = 'Obrigado pelo contato! Entrarei em breve em contato.';
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
